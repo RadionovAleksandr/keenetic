@@ -1,0 +1,14 @@
+<table>
+  <thead>
+  <tr>
+    <th *ngFor="let item of heads" (click)="sort(item)">{{item.value}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of list; trackBy: trackByFn" >
+    <td>{{item.address}}</td>
+    <td>{{item.gateway}}</td>
+    <td>{{item.interface}}</td>
+  </tr>
+  </tbody>
+</table>
